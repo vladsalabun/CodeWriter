@@ -73,6 +73,17 @@ class CodeWriter
 		$this->string .= $this->printSpaces($this->defaultSpaces + $this->spaces) . $string . PHP_EOL;
 		return $this;
 	}
+    
+	/** 
+	 *	Додати багато рядків:
+	 */
+	public function lines($array) 
+	{
+		foreach($array as $string) {
+            $this->string .= $this->printSpaces($this->defaultSpaces + $this->spaces) . $string . PHP_EOL;
+        }
+		return $this;
+	}
 	
 	/** 
 	 *	Отримати весь згенерований код:
