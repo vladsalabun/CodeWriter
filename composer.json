@@ -1,0 +1,16 @@
+{
+    "name": "salabun/codewriter",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Vlad Salabun",
+            "email": "vlad@salabun.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Salabun\\": "src/"
+        }
+    },	
+    "require": {}
+}
