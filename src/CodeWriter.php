@@ -1,10 +1,11 @@
 <?php
-
 namespace Salabun;
+
+use Salabun\helper\CodeHelper;
 
 /**
  * 	Супер крута штука, щоб генерувати код:
- * 	Версія 1.01
+ * 	Версія 1.0
  */
 class CodeWriter 
 {
@@ -14,6 +15,7 @@ class CodeWriter
 		$this->pre = false;
 		$this->defaultSpaces = 0;
 		$this->spaces = 0;
+		$this->helper = new CodeHelper;
 	}
 	
 	/** 
@@ -94,7 +96,7 @@ class CodeWriter
 		if($this->pre == true) {
 			return '<pre>'. PHP_EOL . $this->string . '</pre>';
 		} else {
-			return $this->string;
+			return trim($this->string);
 		}
 	}
 	
